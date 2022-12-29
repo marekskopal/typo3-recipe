@@ -1,0 +1,9 @@
+parameters:
+	phpVersion: 80100
+	paths:
+		- Classes
+		- Configuration
+	scanDirectories:
+		- vendor
+	level: 9
+	ignoreErrors:

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-08-25T00:00:00Z" product-name="ms_recipe">
+		<header/>
+		<body>
+
+			<trans-unit id="recipe_type">
+				<source>Recipe</source>
+			</trans-unit>
+
+			<trans-unit id="tx_msrecipe_domain_model_ingredient">
+				<source>Ingredient</source>
+			</trans-unit>
+			<trans-unit id="tx_msrecipe_domain_model_ingredient.ingredient">
+				<source>Ingredient</source>
+			</trans-unit>
+
+			<trans-unit id="tx_msrecipe_domain_model_ingredientsection">
+				<source>Ingredient Section</source>
+			</trans-unit>
+			<trans-unit id="tx_msrecipe_domain_model_ingredientsection.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_msrecipe_domain_model_ingredientsection.ingredients">
+				<source>Ingredients</source>
+			</trans-unit>
+			<trans-unit id="tx_msrecipe_domain_model_ingredientsection.bodytext">
+				<source>Text</source>
+			</trans-unit>
+
+			<trans-unit id="tx_msrecipe_domain_model_instruction">
+				<source>Instruction</source>
+			</trans-unit>
+			<trans-unit id="tx_msrecipe_domain_model_instruction.instruction">
+				<source>Instruction</source>
+			</trans-unit>
+
+			<trans-unit id="tx_msrecipe_domain_model_instructionsection">
+				<source>Instruction Section</source>
+			</trans-unit>
+			<trans-unit id="tx_msrecipe_domain_model_instructionsection.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_msrecipe_domain_model_instructionsection.instructions">
+				<source>Instructions</source>
+			</trans-unit>
+
+			<trans-unit id="tx_news_domain_model_news.ingredient_sections">
+				<source>Ingredient Sections</source>
+			</trans-unit>
+			<trans-unit id="tx_news_domain_model_news.ingredient_text">
+				<source>Ingredient text</source>
+			</trans-unit>
+			<trans-unit id="tx_news_domain_model_news.instruction_sections">
+				<source>Instruction Sections</source>
+			</trans-unit>
+			<trans-unit id="tx_news_domain_model_news.instruction_text">
+				<source>Instruction text</source>
+			</trans-unit>
+			<trans-unit id="tx_news_domain_model_news.nutrition_yield">
+				<source>Yield</source>
+			</trans-unit>
+			<trans-unit id="tx_news_domain_model_news.nutrition_calories">
+				<source>Calories</source>
+			</trans-unit>
+			<trans-unit id="tx_news_domain_model_news.nutrition_proteins">
+				<source>Proteins</source>
+			</trans-unit>
+			<trans-unit id="tx_news_domain_model_news.nutrition_carbs">
+				<source>Carbohydrates</source>
+			</trans-unit>
+			<trans-unit id="tx_news_domain_model_news.nutrition_fats">
+				<source>Fats</source>
+			</trans-unit>
+			<trans-unit id="tx_news_domain_model_news.nutrition_fiber">
+				<source>Fiber</source>
+			</trans-unit>
+
+        </body>
+    </file>
+</xliff>

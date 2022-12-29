@@ -1,0 +1,43 @@
+{
+    "name": "marekskopal/typo3-recipe",
+    "version": "1.0.0",
+    "type": "typo3-cms-extension",
+    "description": "Food recipes extension of plugin tx_news for TYPO3 CMS",
+    "keywords": [
+      "TYPO3",
+      "instagram"
+    ],
+    "homepage": "https://marekskopal.cz",
+    "authors": [
+      {
+        "name": "Marek Skopal",
+        "role": "Developer",
+        "homepage": "https://marekskopal.cz"
+      }
+    ],
+    "license": ["GPL-2.0-or-later"],
+    "require": {
+      "typo3/cms-core": "^11.5.18",
+      "typo3/cms-extbase": "^11.5.18",
+      "georgringer/news": "^9.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "MarekSkopal\\MsRecipe\\": "Classes/"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "ms_recipe"
+        }
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.9"
+    },
+    "config": {
+        "allow-plugins": {
+            "typo3/cms-composer-installers": true,
+            "typo3/class-alias-loader": true
+        }
+    }
+}

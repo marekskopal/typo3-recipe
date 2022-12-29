@@ -1,0 +1,14 @@
+config.tx_extbase.persistence.classes {
+    GeorgRinger\News\Domain\Model\News {
+        subclasses {
+            3 = MarekSkopal\MsRecipe\Domain\Model\Recipe
+        }
+    }
+
+    MarekSkopal\MsRecipe\Domain\Model\Recipe {
+        mapping {
+            recordType = 3
+            tableName = tx_news_domain_model_news
+        }
+    }
+}

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="cs" datatype="plaintext" original="messages" date="2020-08-25T00:00:00Z" product-name="ms_recipe">
+		<header/>
+		<body>
+
+			<trans-unit id="recipe_type">
+				<source>Recipe</source>
+				<target>Recept</target>
+			</trans-unit>
+
+			<trans-unit id="tx_msrecipe_domain_model_ingredient">
+				<source>Ingredient</source>
+				<target>Ingredience</target>
+			</trans-unit>
+			<trans-unit id="tx_msrecipe_domain_model_ingredient.ingredient">
+				<source>Ingredient</source>
+				<target>Ingredience</target>
+			</trans-unit>
+
+			<trans-unit id="tx_msrecipe_domain_model_ingredientsection">
+				<source>Ingredient Section</source>
+				<target>Sekce ingrediencí</target>
+			</trans-unit>
+			<trans-unit id="tx_msrecipe_domain_model_ingredientsection.title">
+				<source>Title</source>
+				<target>Název</target>
+			</trans-unit>
+			<trans-unit id="tx_msrecipe_domain_model_ingredientsection.ingredients">
+				<source>Ingredients</source>
+				<target>Ingredience</target>
+			</trans-unit>
+			<trans-unit id="tx_msrecipe_domain_model_ingredientsection.bodytext">
+				<source>Text</source>
+				<target>Text</target>
+			</trans-unit>
+
+			<trans-unit id="tx_msrecipe_domain_model_instruction">
+				<source>Instruction</source>
+				<target>Intrukce</target>
+			</trans-unit>
+			<trans-unit id="tx_msrecipe_domain_model_instruction.instruction">
+				<source>Instruction</source>
+				<target>Intrukce</target>
+			</trans-unit>
+
+			<trans-unit id="tx_msrecipe_domain_model_instructionsection">
+				<source>Instruction Section</source>
+				<target>Sekce intrukcí</target>
+			</trans-unit>
+			<trans-unit id="tx_msrecipe_domain_model_instructionsection.title">
+				<source>Title</source>
+				<target>Název</target>
+			</trans-unit>
+			<trans-unit id="tx_msrecipe_domain_model_instructionsection.instructions">
+				<source>Instructions</source>
+				<target>Intrukce</target>
+			</trans-unit>
+
+			<trans-unit id="tx_news_domain_model_news.ingredient_sections">
+				<source>Ingredient Sections</source>
+				<target>Sekce ingrediencí</target>
+			</trans-unit>
+			<trans-unit id="tx_news_domain_model_news.ingredient_text">
+				<source>Ingredient text</source>
+				<target>Text ingrediencí</target>
+			</trans-unit>
+			<trans-unit id="tx_news_domain_model_news.instruction_sections">
+				<source>Instruction Sections</source>
+				<target>Sekce instrukcí</target>
+			</trans-unit>
+			<trans-unit id="tx_news_domain_model_news.instruction_text">
+				<source>Instruction text</source>
+				<target>Text instrukcí</target>
+			</trans-unit>
+			<trans-unit id="tx_news_domain_model_news.nutrition_yield">
+				<source>Yield</source>
+				<target>Množtví (porcí)</target>
+			</trans-unit>
+			<trans-unit id="tx_news_domain_model_news.nutrition_calories">
+				<source>Calories</source>
+				<target>Kalorie</target>
+			</trans-unit>
+			<trans-unit id="tx_news_domain_model_news.nutrition_proteins">
+				<source>Proteins</source>
+				<target>Bílkoviny</target>
+			</trans-unit>
+			<trans-unit id="tx_news_domain_model_news.nutrition_carbs">
+				<source>Carbohydrates</source>
+				<target>Sacharidy</target>
+			</trans-unit>
+			<trans-unit id="tx_news_domain_model_news.nutrition_fats">
+				<source>Fats</source>
+				<target>Tuky</target>
+			</trans-unit>
+			<trans-unit id="tx_news_domain_model_news.nutrition_fiber">
+				<source>Fiber</source>
+				<target>Vláknina</target>
+			</trans-unit>
+
+        </body>
+    </file>
+</xliff>
