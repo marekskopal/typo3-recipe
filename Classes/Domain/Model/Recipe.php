@@ -10,7 +10,7 @@ use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
  *
  *  Copyright notice
  *
- *  (c) 2020 Marek Skopal <skopal.marek@gmail.com>
+ *  (c) 2023 Marek Skopal <skopal.marek@gmail.com>
  *
  *  All rights reserved
  *
@@ -37,7 +37,7 @@ use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
  */
 class Recipe extends News
 {
-    protected ?string $nutritionYield;
+    protected ?string $nutritionYield = null;
 
     protected int $nutritionCalories;
 
@@ -55,7 +55,7 @@ class Recipe extends News
      */
     protected ObjectStorage $ingredientSections;
 
-    protected ?string $ingredientText;
+    protected ?string $ingredientText = null;
 
     /**
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\MarekSkopal\MsRecipe\Domain\Model\InstructionSection>
@@ -63,7 +63,7 @@ class Recipe extends News
      */
     protected ObjectStorage $instructionSections;
 
-    protected ?string $instructionText;
+    protected ?string $instructionText = null;
 
     /**
      * @return string|null

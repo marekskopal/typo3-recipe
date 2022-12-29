@@ -8,7 +8,7 @@ use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
  *
  *  Copyright notice
  *
- *  (c) 2020 Marek Skopal <skopal.marek@gmail.com>
+ *  (c) 2023 Marek Skopal <skopal.marek@gmail.com>
  *
  *  All rights reserved
  *
