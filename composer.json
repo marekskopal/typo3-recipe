@@ -1,13 +1,11 @@
 {
     "name": "marekskopal/typo3-recipe",
-    "version": "1.0.0",
     "type": "typo3-cms-extension",
     "description": "Food recipes extension of plugin tx_news for TYPO3 CMS",
     "keywords": [
       "TYPO3",
       "recipes"
     ],
-    "homepage": "https://marekskopal.cz",
     "authors": [
       {
         "name": "Marek Skopal",
