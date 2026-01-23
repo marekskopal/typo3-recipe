@@ -1,90 +1,48 @@
 <?php
 
-if (!defined ('TYPO3_MODE')) {
-    die ('Access denied.');
-}
+declare(strict_types=1);
+
+defined('TYPO3') or die;
 
 $llPath = 'LLL:EXT:ms_recipe/Resources/Private/Language/locallang_db.xlf';
+$table = 'tx_msrecipe_domain_model_ingredient';
 
-$GLOBALS['TCA']['tx_msrecipe_domain_model_ingredient'] = [
+return [
     'ctrl' => [
-        'title' => $llPath . ':tx_msrecipe_domain_model_ingredient',
+        'title' => $llPath . ':' . $table,
         'label' => 'ingredient',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
-        'cruser_id' => 'cruser_id',
-        'dividers2tabs' => TRUE,
+        'dividers2tabs' => true,
         'sortby' => 'sorting',
         'languageField' => 'sys_language_uid',
         'transOrigPointerField' => 'l10n_parent',
         'transOrigDiffSourceField' => 'l10n_diffsource',
         'delete' => 'deleted',
         'enablecolumns' => [
-            'disabled' => 'hidden'
+            'disabled' => 'hidden',
         ],
         'searchFields' => 'ingredient',
-        'iconfile' => 'EXT:ms_recipe/Resources/Public/Icons/tx_msrecipe_domain_model_ingredient.svg'
+        'iconfile' => 'EXT:ms_recipe/Resources/Public/Icons/tx_msrecipe_domain_model_ingredient.svg',
     ],
-    'interface' => [
-    ],
+    'interface' => [],
     'types' => [
         '1' => [
-            'showitem' => 'ingredient'
-        ]
+            'showitem' => 'ingredient',
+        ],
     ],
     'palettes' => [
         '1' => [
-            'showitem' => ''
-        ]
+            'showitem' => '',
+        ],
     ],
     'columns' => [
-        'sys_language_uid' => [
-            'exclude' => 1,
-            'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.language',
-            'config' => [
-                'type' => 'select',
-                'renderType' => 'selectSingle',
-                'foreign_table' => 'sys_language',
-                'foreign_table_where' => 'ORDER BY sys_language.title',
-                'items' => [
-                    [
-                        'LLL:EXT:lang/locallang_general.xlf:LGL.allLanguages',
-                        -1
-                    ],
-                    [
-                        'LLL:EXT:lang/locallang_general.xlf:LGL.default_value',
-                        0
-                    ]
-                ]
-            ]
-        ],
-        'l10n_parent' => [
-            'displayCond' => 'FIELD:sys_language_uid:>:0',
-            'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.l18n_parent',
-            'config' => [
-                'type' => 'select',
-                'renderType' => 'selectSingle',
-                'items' => [
-                    [
-                        '',
-                        0
-                    ]
-                ],
-                'foreign_table' => 'tx_msrecipe_domain_model_ingredient',
-                'foreign_table_where' => 'AND tx_msrecipe_domain_model_ingredient.pid=###CURRENT_PID### AND tx_msrecipe_domain_model_ingredient.sys_language_uid IN (-1,0)'
-            ]
-        ],
-        'l10n_diffsource' => [
-            'config' => [
-                'type' => 'passthrough'
-            ]
-        ],
         'hidden' => [
             'exclude' => 1,
-            'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.hidden',
+            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.hidden',
             'config' => [
-                'type' => 'check'
-            ]
+                'type' => 'check',
+            ],
         ],
         'ingredient' => [
             'exclude' => 1,
