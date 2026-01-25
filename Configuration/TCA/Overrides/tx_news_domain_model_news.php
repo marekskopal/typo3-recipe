@@ -7,11 +7,12 @@ use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 defined('TYPO3') or die;
 
 $llPath = 'LLL:EXT:ms_recipe/Resources/Private/Language/locallang_db.xlf';
+$table = 'tx_news_domain_model_news';
 
 $fields = [
     'ingredient_sections' => [
         'exclude' => 1,
-        'label' => $llPath . ':tx_news_domain_model_news.ingredient_sections',
+        'label' => $llPath . ':' . $table . '.ingredient_sections',
         'config' => [
             'type' => 'inline',
             'foreign_table' => 'tx_msrecipe_domain_model_ingredientsection',
@@ -20,7 +21,7 @@ $fields = [
     ],
     'ingredient_text' => [
         'exclude' => 1,
-        'label' => $llPath . ':tx_news_domain_model_news.ingredient_text',
+        'label' => $llPath . ':' . $table . '.ingredient_text',
         'config' => [
             'type' => 'text',
             'cols' => 40,
@@ -31,7 +32,7 @@ $fields = [
     ],
     'instruction_sections' => [
         'exclude' => 1,
-        'label' => $llPath . ':tx_news_domain_model_news.instruction_sections',
+        'label' => $llPath . ':' . $table . '.instruction_sections',
         'config' => [
             'type' => 'inline',
             'foreign_table' => 'tx_msrecipe_domain_model_instructionsection',
@@ -40,7 +41,7 @@ $fields = [
     ],
     'instruction_text' => [
         'exclude' => 1,
-        'label' => $llPath . ':tx_news_domain_model_news.instruction_text',
+        'label' => $llPath . ':' . $table . '.instruction_text',
         'config' => [
             'type' => 'text',
             'cols' => 40,
@@ -51,7 +52,7 @@ $fields = [
     ],
     'nutrition_yield' => [
         'exclude' => 1,
-        'label' => $llPath . ':tx_news_domain_model_news.nutrition_yield',
+        'label' => $llPath . ':' . $table . '.nutrition_yield',
         'config' => [
             'type' => 'text',
             'cols' => 40,
@@ -61,11 +62,11 @@ $fields = [
     ],
     'nutrition_calories' => [
         'exclude' => 1,
-        'label' => $llPath . ':tx_news_domain_model_news.nutrition_calories',
+        'label' => $llPath . ':' . $table . '.nutrition_calories',
         'config' => [
-            'type' => 'input',
+            'type' => 'number',
             'size' => 10,
-            'eval' => 'trim,int',
+            'format' => 'integer',
             'range' => [
                 'lower' => 0,
                 'upper' => 99999,
@@ -75,11 +76,11 @@ $fields = [
     ],
     'nutrition_proteins' => [
         'exclude' => 1,
-        'label' => $llPath . ':tx_news_domain_model_news.nutrition_proteins',
+        'label' => $llPath . ':' . $table . '.nutrition_proteins',
         'config' => [
-            'type' => 'input',
+            'type' => 'number',
             'size' => 10,
-            'eval' => 'trim,int',
+            'format' => 'integer',
             'range' => [
                 'lower' => 0,
                 'upper' => 99999,
@@ -89,11 +90,11 @@ $fields = [
     ],
     'nutrition_carbs' => [
         'exclude' => 1,
-        'label' => $llPath . ':tx_news_domain_model_news.nutrition_carbs',
+        'label' => $llPath . ':' . $table . '.nutrition_carbs',
         'config' => [
-            'type' => 'input',
+            'type' => 'number',
             'size' => 10,
-            'eval' => 'trim,int',
+            'format' => 'integer',
             'range' => [
                 'lower' => 0,
                 'upper' => 99999,
@@ -103,11 +104,11 @@ $fields = [
     ],
     'nutrition_fats' => [
         'exclude' => 1,
-        'label' => $llPath . ':tx_news_domain_model_news.nutrition_fats',
+        'label' => $llPath . ':' . $table . '.nutrition_fats',
         'config' => [
-            'type' => 'input',
+            'type' => 'number',
             'size' => 10,
-            'eval' => 'trim,int',
+            'format' => 'integer',
             'range' => [
                 'lower' => 0,
                 'upper' => 99999,
@@ -117,11 +118,11 @@ $fields = [
     ],
     'nutrition_fiber' => [
         'exclude' => 1,
-        'label' => $llPath . ':tx_news_domain_model_news.nutrition_fiber',
+        'label' => $llPath . ':' . $table . '.nutrition_fiber',
         'config' => [
-            'type' => 'input',
+            'type' => 'number',
             'size' => 10,
-            'eval' => 'trim,int',
+            'format' => 'integer',
             'range' => [
                 'lower' => 0,
                 'upper' => 99999,
@@ -132,7 +133,7 @@ $fields = [
 ];
 
 /** @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
-$GLOBALS['TCA']['tx_news_domain_model_news']['palettes']['palette_recipe'] = [
+$GLOBALS['TCA'][$table]['palettes']['palette_recipe'] = [
     'canNotCollapse' => true,
     'showitem' => 'ingredient_sections,ingredient_text,--linebreak--,
         instruction_sections,instruction_text,--linebreak--,
@@ -141,13 +142,13 @@ $GLOBALS['TCA']['tx_news_domain_model_news']['palettes']['palette_recipe'] = [
 ];
 
 /** @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
-$GLOBALS['TCA']['tx_news_domain_model_news']['columns']['type']['config']['items']['3'] = [
-    $llPath . ':recipe_type',
-    3,
+$GLOBALS['TCA'][$table]['columns']['type']['config']['items']['3'] = [
+    'label' => $llPath . ':recipe_type',
+    'value' => 3,
 ];
 
 /** @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
-$GLOBALS['TCA']['tx_news_domain_model_news']['types']['3'] = $GLOBALS['TCA']['tx_news_domain_model_news']['types']['0'];
+$GLOBALS['TCA'][$table]['types']['3'] = $GLOBALS['TCA'][$table]['types']['0'];
 
-ExtensionManagementUtility::addTCAcolumns('tx_news_domain_model_news', $fields);
-ExtensionManagementUtility::addToAllTCAtypes('tx_news_domain_model_news', '--palette--;;palette_recipe', '3', 'after:bodytext');
+ExtensionManagementUtility::addTCAcolumns($table, $fields);
+ExtensionManagementUtility::addToAllTCAtypes($table, '--palette--;;palette_recipe', '3', 'after:bodytext');
