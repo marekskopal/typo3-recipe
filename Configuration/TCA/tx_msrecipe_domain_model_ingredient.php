@@ -13,7 +13,6 @@ return [
         'label' => 'ingredient',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
-        'dividers2tabs' => true,
         'sortby' => 'sorting',
         'languageField' => 'sys_language_uid',
         'transOrigPointerField' => 'l10n_parent',
@@ -25,7 +24,6 @@ return [
         'searchFields' => 'ingredient',
         'iconfile' => 'EXT:ms_recipe/Resources/Public/Icons/tx_msrecipe_domain_model_ingredient.svg',
     ],
-    'interface' => [],
     'types' => [
         '1' => [
             'showitem' => 'ingredient',

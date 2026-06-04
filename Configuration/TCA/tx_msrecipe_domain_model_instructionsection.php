@@ -13,7 +13,6 @@ return [
         'label' => 'title',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
-        'dividers2tabs' => true,
         'sortby' => 'sorting',
         'languageField' => 'sys_language_uid',
         'transOrigPointerField' => 'l10n_parent',
@@ -25,7 +24,6 @@ return [
         'searchFields' => 'title',
         'iconfile' => 'EXT:ms_recipe/Resources/Public/Icons/tx_msrecipe_domain_model_instructionsection.svg',
     ],
-    'interface' => [],
     'types' => [
         '1' => [
             'showitem' => 'title, instructions',
