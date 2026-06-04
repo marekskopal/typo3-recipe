@@ -14,6 +14,7 @@ parameters:
     checkMissingCallableSignature: true
     checkTooWideReturnTypesInProtectedAndPublicMethods: true
     reportAnyTypeWideningInVarTag: true
+    reportMaybesInPropertyPhpDocTypes: false
 
     shipmonkRules:
         allowComparingOnlyComparableTypes:
