@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" target-language="cs" datatype="plaintext" original="messages" date="2026-06-04T00:00:00Z" product-name="ms_recipe">
+        <header/>
+        <body>
+            <trans-unit id="recipe.ingredients" xml:space="preserve">
+                <source>Ingredients</source>
+                <target>Suroviny</target>
+            </trans-unit>
+            <trans-unit id="recipe.instructions" xml:space="preserve">
+                <source>Method</source>
+                <target>Postup</target>
+            </trans-unit>
+            <trans-unit id="recipe.nutrition" xml:space="preserve">
+                <source>Nutrients</source>
+                <target>Makroživiny</target>
+            </trans-unit>
+            <trans-unit id="recipe.nutrition.proteins" xml:space="preserve">
+                <source>Proteins</source>
+                <target>Bílkoviny</target>
+            </trans-unit>
+            <trans-unit id="recipe.nutrition.fats" xml:space="preserve">
+                <source>Fats</source>
+                <target>Tuky</target>
+            </trans-unit>
+            <trans-unit id="recipe.nutrition.carbs" xml:space="preserve">
+                <source>Carbohydrates</source>
+                <target>Sacharidy</target>
+            </trans-unit>
+            <trans-unit id="recipe.nutrition.fiber" xml:space="preserve">
+                <source>Fiber</source>
+                <target>Vláknina</target>
+            </trans-unit>
+            <trans-unit id="recipe.nutrition.calories" xml:space="preserve">
+                <source>Calories</source>
+                <target>Energetická hodnota</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

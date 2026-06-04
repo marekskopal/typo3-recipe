@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace MarekSkopal\MsRecipe\Domain\Model;
 
-use GeorgRinger\News\Domain\Model\FileReference;
 use GeorgRinger\News\Domain\Model\News;
 use Stringable;
 use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
@@ -162,92 +161,5 @@ class Recipe extends News implements Stringable
             || $this->nutritionCarbs !== 0
             || $this->nutritionFats !== 0
             || $this->nutritionFiber !== 0;
-    }
-
-    /** @return array<mixed> */
-    public function getStructuredData(): array
-    {
-        $structuredData = [];
-
-        $structuredData['@context'] = 'https://schema.org/';
-        $structuredData['@type'] = 'Recipe';
-        $structuredData['name'] = $this->getTitle();
-
-        foreach ($this->getMediaPreviews() as $mediaPreview) {
-            /** @var FileReference $mediaPreview */
-            $structuredData['image'][] = $mediaPreview->getOriginalResource()->getPublicUrl();
-        }
-
-        $structuredData['author'] = [
-            '@type' => 'Person',
-            'name' => 'Marek Skopal',
-        ];
-
-        $structuredData['datePublished'] = $this->getDatetime()?->format('Y-m-d');
-
-        $teaser = $this->getTeaser();
-        if ($teaser !== '') {
-            $structuredData['description'] = $teaser;
-        }
-
-        $structuredData['keywords'] = $this->getKeywords();
-
-        $nutritionYield = $this->getNutritionYield();
-        if ($nutritionYield !== null && $nutritionYield !== '') {
-            $structuredData['recipeYield'] = $nutritionYield;
-        }
-
-        $nutritionCalories = $this->getNutritionCalories();
-        if ($nutritionCalories > 0) {
-            $structuredData['nutrition'] = [
-                '@type' => 'NutritionInformation',
-                'calories' => $nutritionCalories,
-            ];
-        }
-
-        $ingredientSections = $this->getIngredientSections();
-        if ($ingredientSections->count() > 0) {
-            foreach ($ingredientSections as $ingredientSection) {
-                foreach ($ingredientSection->getIngredients() as $ingredient) {
-                    $structuredData['recipeIngredient'][] = $ingredient->getIngredient();
-                }
-            }
-        }
-
-        $instructionSections = $this->getInstructionSections();
-        if ($instructionSections->count() > 0) {
-            if ($instructionSections->count() === 1) {
-                foreach ($instructionSections as $instructionSection) {
-                    foreach ($instructionSection->getInstructions() as $instruction) {
-                        $structuredData['recipeInstructions'][] = [
-                            '@type' => 'HowToStep',
-                            'text' => $instruction->getInstruction(),
-                            //'url' => 'https://example.com/party-coffee-cake#step1',
-                        ];
-                    }
-                }
-            } else {
-                foreach ($instructionSections as $instructionSection) {
-
-                    $howToSteps = [];
-
-                    foreach ($instructionSection->getInstructions() as $instruction) {
-                        $howToSteps[] = [
-                            '@type' => 'HowToStep',
-                            'text' => $instruction->getInstruction(),
-                            //'url' => 'https://example.com/party-coffee-cake#step1',
-                        ];
-                    }
-
-                    $structuredData['recipeInstructions'][] = [
-                        '@type' => 'HowToSection',
-                        'name' => $instructionSection->getTitle(),
-                        'itemListElement' => $howToSteps,
-                    ];
-                }
-            }
-        }
-
-        return $structuredData;
     }
 }

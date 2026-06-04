@@ -1,0 +1,106 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:r="http://typo3.org/ns/MarekSkopal/MsRecipe/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<div class="recipe">
+    <f:if condition="{recipe.ingredientSections}">
+        <div class="recipe-ingredients">
+            <h3><f:translate key="LLL:EXT:ms_recipe/Resources/Private/Language/locallang.xlf:recipe.ingredients" /></h3>
+
+            <f:if condition="{recipe.nutritionYield}">
+                <p class="recipe-yield">{recipe.nutritionYield}</p>
+            </f:if>
+
+            <div class="recipe-ingredients-sections">
+                <f:for each="{recipe.ingredientSections}" as="ingredientSection">
+                    <div class="recipe-ingredients-section">
+                        <f:if condition="{ingredientSection.title}">
+                            <h4>{ingredientSection.title}</h4>
+                        </f:if>
+
+                        <ul>
+                            <f:for each="{ingredientSection.ingredients}" as="ingredient">
+                                <li>{ingredient.ingredient}</li>
+                            </f:for>
+                        </ul>
+
+                        <f:if condition="{ingredientSection.bodytext}">
+                            <f:format.html>{ingredientSection.bodytext}</f:format.html>
+                        </f:if>
+                    </div>
+                </f:for>
+            </div>
+
+            <f:if condition="{recipe.ingredientText}">
+                <f:format.html>{recipe.ingredientText}</f:format.html>
+            </f:if>
+        </div>
+    </f:if>
+
+    <f:if condition="{recipe.instructionSections}">
+        <div class="recipe-instructions">
+            <h3><f:translate key="LLL:EXT:ms_recipe/Resources/Private/Language/locallang.xlf:recipe.instructions" /></h3>
+
+            <f:for each="{recipe.instructionSections}" as="instructionSection">
+                <div class="recipe-instructions-section">
+                    <f:if condition="{instructionSection.title}">
+                        <h4>{instructionSection.title}</h4>
+                    </f:if>
+
+                    <ol>
+                        <f:for each="{instructionSection.instructions}" as="instruction">
+                            <li>{instruction.instruction}</li>
+                        </f:for>
+                    </ol>
+                </div>
+            </f:for>
+        </div>
+    </f:if>
+
+    <f:if condition="{recipe.instructionText}">
+        <div class="recipe-instruction-text">
+            <f:format.html>{recipe.instructionText}</f:format.html>
+        </div>
+    </f:if>
+
+    <f:if condition="{recipe.hasNutrition}">
+        <div class="recipe-nutrition">
+            <h3><f:translate key="LLL:EXT:ms_recipe/Resources/Private/Language/locallang.xlf:recipe.nutrition" /></h3>
+            <ul>
+                <f:if condition="{recipe.nutritionProteins}">
+                    <li>
+                        <f:translate key="LLL:EXT:ms_recipe/Resources/Private/Language/locallang.xlf:recipe.nutrition.proteins" />:
+                        {recipe.nutritionProteins}&nbsp;g
+                    </li>
+                </f:if>
+                <f:if condition="{recipe.nutritionFats}">
+                    <li>
+                        <f:translate key="LLL:EXT:ms_recipe/Resources/Private/Language/locallang.xlf:recipe.nutrition.fats" />:
+                        {recipe.nutritionFats}&nbsp;g
+                    </li>
+                </f:if>
+                <f:if condition="{recipe.nutritionCarbs}">
+                    <li>
+                        <f:translate key="LLL:EXT:ms_recipe/Resources/Private/Language/locallang.xlf:recipe.nutrition.carbs" />:
+                        {recipe.nutritionCarbs}&nbsp;g
+                    </li>
+                </f:if>
+                <f:if condition="{recipe.nutritionFiber}">
+                    <li>
+                        <f:translate key="LLL:EXT:ms_recipe/Resources/Private/Language/locallang.xlf:recipe.nutrition.fiber" />:
+                        {recipe.nutritionFiber}&nbsp;g
+                    </li>
+                </f:if>
+                <f:if condition="{recipe.nutritionCalories}">
+                    <li>
+                        <f:translate key="LLL:EXT:ms_recipe/Resources/Private/Language/locallang.xlf:recipe.nutrition.calories" />:
+                        <strong>{recipe.nutritionCalories}&nbsp;kcal</strong>
+                    </li>
+                </f:if>
+            </ul>
+        </div>
+    </f:if>
+
+    <r:structuredData recipe="{recipe}" />
+</div>
+</html>

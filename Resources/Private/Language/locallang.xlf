@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2026-06-04T00:00:00Z" product-name="ms_recipe">
+        <header/>
+        <body>
+            <trans-unit id="recipe.ingredients" xml:space="preserve">
+                <source>Ingredients</source>
+            </trans-unit>
+            <trans-unit id="recipe.instructions" xml:space="preserve">
+                <source>Method</source>
+            </trans-unit>
+            <trans-unit id="recipe.nutrition" xml:space="preserve">
+                <source>Nutrients</source>
+            </trans-unit>
+            <trans-unit id="recipe.nutrition.proteins" xml:space="preserve">
+                <source>Proteins</source>
+            </trans-unit>
+            <trans-unit id="recipe.nutrition.fats" xml:space="preserve">
+                <source>Fats</source>
+            </trans-unit>
+            <trans-unit id="recipe.nutrition.carbs" xml:space="preserve">
+                <source>Carbohydrates</source>
+            </trans-unit>
+            <trans-unit id="recipe.nutrition.fiber" xml:space="preserve">
+                <source>Fiber</source>
+            </trans-unit>
+            <trans-unit id="recipe.nutrition.calories" xml:space="preserve">
+                <source>Calories</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

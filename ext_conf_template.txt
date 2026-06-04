@@ -1,0 +1,5 @@
+# cat=author/enable/10; type=string; label=Author name (used in recipe JSON-LD structured data)
+authorName =
+
+# cat=author/enable/20; type=string; label=Author URL (optional, used in recipe JSON-LD structured data)
+authorUrl =

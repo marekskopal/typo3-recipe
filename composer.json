@@ -24,6 +24,11 @@
             "MarekSkopal\\MsRecipe\\": "Classes/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "MarekSkopal\\MsRecipe\\Tests\\": "Tests/"
+        }
+    },
     "extra": {
         "typo3/cms": {
             "extension-key": "ms_recipe"
